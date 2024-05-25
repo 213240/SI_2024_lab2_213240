@@ -10,7 +10,9 @@ Nikolas Kuzmanovski, 213240
    Прв начин: Броенје на вкупниот број на полиња
    Втор начин: Бројот на ребра(36) - бројот на јазли(27) + 2
 
-4.@Test
+4.Тест случаи според критериумот Every Branch
+
+@Test
     void testAllItemsNull() {
         RuntimeException exception = assertThrows(RuntimeException.class, () -> {
             SILab2.checkCart(null, 100);
@@ -57,7 +59,7 @@ Nikolas Kuzmanovski, 213240
     }
 
     @Test
-    void Special Discount Condition() {
+    void testPriceGreaterThan300WithDiscountAndBarcodeStartsWithZero() {
         Item item = new Item("Item1", "012345", 400, 0.1f);
         assertTrue(SILab2.checkCart(Collections.singletonList(item), 100));
     }
@@ -88,7 +90,9 @@ testSumGreaterThanPayment: Осигурува дека методот враќа
 
 
 
-5.@Test
+5.Тест случаи според критериумот Multiple Condition
+
+@Test
     void testMultipleConditions() {
         // Test case: (T, T, T)
         Item item1 = new Item("Item1", "012345", 400, 0.1f);
